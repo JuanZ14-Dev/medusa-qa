@@ -363,11 +363,13 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Categoría | Herramienta | Propósito |
 | --- | --- | --- |
-| **Gestión de pruebas** | GitHub Issues + Plantillas YAML | Registro y seguimiento de 45 casos (`CP-*`) y defectos (`DEF-*`) |
-| **Automatización** | Playwright + TypeScript | Ejecución automática de 27 pruebas E2E e integración HTTP |
+| **Gestión de pruebas** | GitHub Issues + Plantillas YAML + GitHub CLI (`gh`) | Registro, etiquetado y seguimiento automatizado de 45 casos (`CP-*`) y defectos (`DEF-*`) |
+| **Automatización** | Playwright (`1.65.1`) + Chromium + TypeScript (`5.7.3`) + `tsx` | Ejecución automática de 27 pruebas E2E e integración HTTP y scripts de sincronización |
+| **Sistema Bajo Prueba y BD** | Medusa v2 (Turborepo, Next.js) + PostgreSQL `17.12` + Node.js `v24.15.0` | Ejecución local de Storefront (`:8000`), Admin (`:9000/app`) y persistencia relacional |
+| **Infraestructura Local** | WSL 2 + Docker Desktop (`4.99.0` / Docker `29.9.3`) | Soporte de entorno local y contenedores en Windows |
 | **Rendimiento** | No aplica (fuera de alcance) | N/A |
-| **Control de versiones** | Git + GitHub (`JuanZ14-Dev/medusa-qa`) | Gestión de scripts, documentación y evidencias |
-| **Comunicación y Reportes** | GitHub Pages (Jekyll + Chart.js + Mermaid) | Publicación del dashboard visual y análisis final APA 7.ª |
+| **Control de versiones y CI/CD** | Git + GitHub (`JuanZ14-Dev/medusa-qa`) + GitHub Actions | Gestión de scripts, flujos `qa-e2e.yml` y `deploy-pages.yml` |
+| **Comunicación, APA y Reportes** | GitHub Pages (Jekyll) + Chart.js + Mermaid + Prettier + `validate-apa7.ts` | Publicación del dashboard visual, validación APA 7.ª y análisis final |
 
 ### 10.3 Ambiente de Prueba
 
