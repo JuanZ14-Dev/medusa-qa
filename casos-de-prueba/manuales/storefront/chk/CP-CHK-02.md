@@ -9,12 +9,12 @@
 | **Datos de entrada** | Campos obligatorios vacíos (nombre, dirección, ciudad o código postal). |
 | **Pasos de ejecución** | 1. Abrir la vista de checkout. 2. Dejar en blanco los campos obligatorios de dirección de envío. 3. Intentar avanzar al paso de método de envío. |
 | **Resultado esperado** | El formulario bloquea el avance hacia el siguiente paso y resalta o indica los campos obligatorios faltantes. |
-| **Resultado obtenido** | Pendiente de ejecución |
-| **Estado** | `[x] No ejecutado [ ] Pasó [ ] Falló [ ] Bloqueado` |
+| **Resultado obtenido** | Al intentar avanzar con los campos obligatorios vacíos en `/dk/checkout?step=address`, el formulario bloqueó la navegación (permaneció en `?step=address`) y activó la validación HTML5 de campos requeridos (`checkValidity() === false`). |
+| **Estado** | `[ ] No ejecutado [x] Pasó [ ] Falló [ ] Bloqueado` |
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[x] EP [ ] BVA [ ] Tabla de decisión [ ] Otro` |
 | **Responsable** | `SA-04 (QA Analyst)` |
-| **Fecha de ejecución** | `Pendiente` |
+| **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
-| **Observaciones** | Partición de equivalencia inválida para datos faltantes. |
+| **Observaciones** | Evidencia capturada en `docs/evidencias/storefront/CP-CHK-02.png`. |

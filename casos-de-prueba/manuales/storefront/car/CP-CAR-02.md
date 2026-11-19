@@ -9,12 +9,12 @@
 | **Datos de entrada** | Eliminación de uno de los ítems presentes en `/cart`. |
 | **Pasos de ejecución** | 1. Navegar a `http://localhost:8000/cart`. 2. Registrar el subtotal inicial. 3. Hacer clic en eliminar sobre el primer ítem. 4. Verificar la lista de ítems y el nuevo subtotal. |
 | **Resultado esperado** | El ítem desaparece del carrito y el subtotal se recalcula exactamente igual al precio del ítem restante. |
-| **Resultado obtenido** | Pendiente de ejecución |
-| **Estado** | `[x] No ejecutado [ ] Pasó [ ] Falló [ ] Bloqueado` |
+| **Resultado obtenido** | Con 2 ítems iniciales (`Cart (2)`, subtotal `€20.00`), al eliminar el primer ítem el carrito pasó a 1 ítem (`Cart (1)`) y el subtotal se recalculó exactamente a `€10.00`. |
+| **Estado** | `[ ] No ejecutado [x] Pasó [ ] Falló [ ] Bloqueado` |
 | **Prioridad** | `[ ] Alta [x] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [ ] Tabla de decisión [x] Otro` |
 | **Responsable** | `SA-04 (QA Analyst)` |
-| **Fecha de ejecución** | `Pendiente` |
+| **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
-| **Observaciones** | Confirmar también la actualización del contador en el encabezado. |
+| **Observaciones** | Evidencia capturada en `docs/evidencias/storefront/CP-CAR-02.png`. |

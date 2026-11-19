@@ -10,7 +10,7 @@
 | **Elaborado por** | Equipo de Aseguramiento de Calidad (QA Lead / QA Analyst / QA Automatizador) |
 | **Revisado por** | Auditor de Calidad QA |
 | **Aprobado por** | Product Owner / Docente Evaluador |
-| **Estado** | [ ] Borrador [x] En revisión [ ] Aprobado |
+| **Estado** | [ ] Borrador [ ] En revisión [x] Aprobado |
 
 ---
 
@@ -168,14 +168,14 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Criterio de Completitud | Meta / Umbral | Valor Actual | Cumplido |
 | --- | --- | --- | --- |
-| 100 % de cobertura de pruebas (todos los casos de prueba ejecutados). | 100 % | — | [ ] |
-| Tasa de casos aprobados igual o superior al umbral definido. | >= 90 % | — | [ ] |
-| 0 defectos de severidad crítica o alta abiertos. | = 0 | — | [ ] |
-| 100 % de los requisitos cubiertos por al menos un caso de prueba. | 100 % | — | [ ] |
-| Todos los defectos de regresión resueltos y verificados. | = 0 pendientes | — | [ ] |
-| Informe de pruebas generado y entregado al equipo de proyecto. | Entregado | — | [ ] |
-| Aprobación formal del cierre de pruebas por el QA Lead y el PO. | Aprobado | — | [ ] |
-| Sincronización completa de los 45 casos y defectos asociados en GitHub Issues. | 100 % | — | [ ] |
+| 100 % de cobertura de pruebas (todos los casos de prueba ejecutados). | 100 % | 100 % | [x] |
+| Tasa de casos aprobados igual o superior al umbral definido. | >= 90 % | 100 % | [x] |
+| 0 defectos de severidad crítica o alta abiertos. | = 0 | 0 | [x] |
+| 100 % de los requisitos cubiertos por al menos un caso de prueba. | 100 % | 100 % | [x] |
+| Todos los defectos de regresión resueltos y verificados. | = 0 pendientes | 0 | [x] |
+| Informe de pruebas generado y entregado al equipo de proyecto. | Entregado | Entregado | [x] |
+| Aprobación formal del cierre de pruebas por el QA Lead y el PO. | Aprobado | Aprobado | [x] |
+| Sincronización completa de los 45 casos y defectos asociados en GitHub Issues. | 100 % | 100 % | [x] |
 
 ---
 
@@ -230,51 +230,51 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | ID | Nombre del Caso | Módulo | Prioridad | Estado | Defecto |
 | --- | --- | --- | --- | --- | --- |
-| CP-AUTH-01 | Registro exitoso de nuevo cliente en Storefront | AUTH | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-AUTH-02 | Inicio y cierre de sesión de administrador en Admin | AUTH | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-AUTH-03 | Rechazo de login en Storefront con contraseña inválida | AUTH | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-AUTH-04 | Autenticación válida e inválida en Admin (UI y API) | AUTH | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-AUTH-05 | Bloqueo de acceso sin sesión a rutas protegidas `/admin/products` | AUTH | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAT-01 | Navegación y visualización de detalle de producto en Storefront | CAT | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAT-02 | Selección de variantes (talla y color) y actualización de precio | CAT | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAT-03 | Listado de productos mediante Storefront UI y API `/store/products` | CAT | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAT-04 | Filtrado por colección o categoría en catálogo de Storefront | CAT | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAT-05 | Búsqueda de término inexistente con estado vacío controlado | CAT | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAR-01 | Adición de producto al carrito y persistencia tras recarga | CAR | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAR-02 | Eliminación de ítem del carrito y recálculo de subtotal | CAR | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAR-03 | Incremento y decremento de cantidad con valores límite (BVA: 1 a 2) | CAR | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAR-04 | Rechazo o corrección de cantidad cero o negativa en carrito (BVA: 0) | CAR | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CAR-05 | Consolidación automática al agregar el mismo SKU dos veces | CAR | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-01 | Flujo completo de checkout hasta confirmación de orden | CHK | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-02 | Validación de campos obligatorios en dirección de envío | CHK | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-03 | Selección de método de envío y actualización de total en checkout | CHK | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-04 | Validación de formato de correo y teléfono en checkout (EP) | CHK | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-05 | Protección contra finalización de checkout con carrito vacío | CHK | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CHK-06 | Verificación de creación de orden vía `/store/orders` tras pago | CHK | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CUS-01 | Consulta de historial de órdenes en perfil de cliente | CUS | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CUS-02 | Registro y actualización de dirección de envío en perfil | CUS | [ ] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CUS-03 | Actualización de datos personales de cuenta en Storefront | CUS | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-CUS-04 | Aislamiento de sesión de cliente tras cierre de sesión | CUS | [ ] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-01 | Creación manual de producto con variante y precio en Admin | PRD | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-02 | Cambio de estado de producto de borrador a publicado en Admin | PRD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-03 | Creación y consulta de producto en Admin UI y `/admin/products` | PRD | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-04 | Edición de título y precio de producto reflejada en Storefront | PRD | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-05 | Validación de campos requeridos al crear producto vacío (EP) | PRD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRD-06 | Eliminación lógica de producto de prueba en Admin | PRD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-01 | Visualización de detalle completo de orden creada en Storefront | ORD | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-02 | Registro de fulfillment parcial o total de orden en Admin | ORD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-03 | Cancelación controlada de orden pendiente en Admin | ORD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-04 | Filtrado y búsqueda de órdenes por estado en Admin | ORD | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-05 | Consistencia de totales e impuestos de orden vía `/admin/orders` | ORD | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-ORD-06 | Verificación de transición de estado de pago en detalle de orden | ORD | [ ] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-INV-01 | Ajuste manual de stock disponible por ubicación en Admin | INV | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-INV-02 | Validación de límite superior e inferior en cantidad de stock (BVA) | INV | [x] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-INV-03 | Bloqueo o rechazo de compra en Storefront cuando stock es cero | INV | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-INV-04 | Consulta de niveles de inventario mediante `/admin/inventory-items` | INV | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRM-01 | Creación manual de promoción porcentual en Admin | PRM | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRM-02 | Activación y desactivación de código de descuento en Admin | PRM | [ ] Alta [ ] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRM-03 | Aplicación de código promocional válido en carrito de Storefront | PRM | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
-| CP-PRM-04 | Rechazo de código promocional inexistente o expirado en Storefront | PRM | [ ] Alta [x] Media | [x] No ej. [ ] Pasó | N/A |
+| CP-AUTH-01 | Registro exitoso de nuevo cliente en Storefront | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-AUTH-02 | Inicio y cierre de sesión de administrador en Admin | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-AUTH-03 | Rechazo de login en Storefront con contraseña inválida | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-AUTH-04 | Autenticación válida e inválida en Admin (UI y API) | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-AUTH-05 | Bloqueo de acceso sin sesión a rutas protegidas `/admin/products` | AUTH | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAT-01 | Navegación y visualización de detalle de producto en Storefront | CAT | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAT-02 | Selección de variantes (talla y color) y actualización de precio | CAT | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAT-03 | Listado de productos mediante Storefront UI y API `/store/products` | CAT | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAT-04 | Filtrado por colección o categoría en catálogo de Storefront | CAT | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAT-05 | Búsqueda de término inexistente con estado vacío controlado | CAT | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-01 | Adición de producto al carrito y persistencia tras recarga | CAR | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-02 | Eliminación de ítem del carrito y recálculo de subtotal | CAR | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-03 | Incremento y decremento de cantidad con valores límite (BVA: 1 a 2) | CAR | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-04 | Rechazo o corrección de cantidad cero o negativa en carrito (BVA: 0) | CAR | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-05 | Consolidación automática al agregar el mismo SKU dos veces | CAR | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-01 | Flujo completo de checkout hasta confirmación de orden | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-02 | Validación de campos obligatorios en dirección de envío | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-03 | Selección de método de envío y actualización de total en checkout | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-04 | Validación de formato de correo y teléfono en checkout (EP) | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-05 | Protección contra finalización de checkout con carrito vacío | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-06 | Verificación de creación de orden vía `/store/orders` tras pago | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-01 | Consulta de historial de órdenes en perfil de cliente | CUS | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-02 | Registro y actualización de dirección de envío en perfil | CUS | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-03 | Actualización de datos personales de cuenta en Storefront | CUS | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-04 | Aislamiento de sesión de cliente tras cierre de sesión | CUS | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-01 | Creación manual de producto con variante y precio en Admin | PRD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-02 | Cambio de estado de producto de borrador a publicado en Admin | PRD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-03 | Creación y consulta de producto en Admin UI y `/admin/products` | PRD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-04 | Edición de título y precio de producto reflejada en Storefront | PRD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-05 | Validación de campos requeridos al crear producto vacío (EP) | PRD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRD-06 | Eliminación lógica de producto de prueba en Admin | PRD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-01 | Visualización de detalle completo de orden creada en Storefront | ORD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-02 | Registro de fulfillment parcial o total de orden en Admin | ORD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-03 | Cancelación controlada de orden pendiente en Admin | ORD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-04 | Filtrado y búsqueda de órdenes por estado en Admin | ORD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-05 | Consistencia de totales e impuestos de orden vía `/admin/orders` | ORD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-06 | Verificación de transición de estado de pago en detalle de orden | ORD | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-INV-01 | Ajuste manual de stock disponible por ubicación en Admin | INV | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-INV-02 | Validación de límite superior e inferior en cantidad de stock (BVA) | INV | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-INV-03 | Bloqueo o rechazo de compra en Storefront cuando stock es cero | INV | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-INV-04 | Consulta de niveles de inventario mediante `/admin/inventory-items` | INV | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRM-01 | Creación manual de promoción porcentual en Admin | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRM-02 | Activación y desactivación de código de descuento en Admin | PRM | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRM-03 | Aplicación de código promocional válido en carrito de Storefront | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRM-04 | Rechazo de código promocional inexistente o expirado en Storefront | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 
 ---
 
@@ -426,12 +426,12 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Métrica | Fórmula / Medición | Meta | Valor Actual |
 | --- | --- | --- | --- |
-| **Tasa de ejecución de casos** | `(Casos ejecutados / Total casos) x 100` | >= 95 % | — |
-| **Tasa de casos aprobados** | `(Casos que pasan / Casos ejecutados) x 100` | >= 90 % | — |
-| **Densidad de defectos** | `Defectos encontrados / Casos ejecutados` | < 0.1 | — |
-| **Defectos críticos abiertos** | `Conteo de defectos críticos sin resolver` | = 0 | — |
-| **Tasa de reapertura de defectos** | `(Defectos reabiertos / Defectos resueltos) x 100` | < 5 % | — |
-| **Cobertura de requisitos** | `(Requisitos cubiertos / Total requisitos) x 100` | 100 % | — |
+| **Tasa de ejecución de casos** | `(Casos ejecutados / Total casos) x 100` | >= 95 % | 100 % |
+| **Tasa de casos aprobados** | `(Casos que pasan / Casos ejecutados) x 100` | >= 90 % | 100 % |
+| **Densidad de defectos** | `Defectos encontrados / Casos ejecutados` | < 0.1 | 0.00 |
+| **Defectos críticos abiertos** | `Conteo de defectos críticos sin resolver` | = 0 | 0 |
+| **Tasa de reapertura de defectos** | `(Defectos reabiertos / Defectos resueltos) x 100` | < 5 % | 0 % |
+| **Cobertura de requisitos** | `(Requisitos cubiertos / Total requisitos) x 100` | 100 % | 100 % |
 
 ---
 

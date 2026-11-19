@@ -1,0 +1,135 @@
+{
+  "generatedAt": "2026-11-19T16:58:00.691Z",
+  "repository": "JuanZ14-Dev/medusa-qa",
+  "totals": {
+    "totalCases": 45,
+    "executed": 45,
+    "passed": 45,
+    "failed": 0,
+    "blocked": 0,
+    "notExecuted": 0,
+    "defectsTotal": 0,
+    "criticalOpen": 0
+  },
+  "kpis": [
+    {
+      "name": "Tasa de ejecución de casos",
+      "formula": "(Casos ejecutados / Total casos) x 100",
+      "target": ">= 95%",
+      "actual": "100%",
+      "numericValue": 100,
+      "met": true
+    },
+    {
+      "name": "Tasa de casos aprobados",
+      "formula": "(Casos que pasan / Casos ejecutados) x 100",
+      "target": ">= 90%",
+      "actual": "100%",
+      "numericValue": 100,
+      "met": true
+    },
+    {
+      "name": "Densidad de defectos",
+      "formula": "Defectos encontrados / Casos ejecutados",
+      "target": "< 0.1",
+      "actual": "0",
+      "numericValue": 0,
+      "met": true
+    },
+    {
+      "name": "Defectos críticos abiertos",
+      "formula": "Conteo de defectos críticos sin resolver",
+      "target": "= 0",
+      "actual": "0",
+      "numericValue": 0,
+      "met": true
+    },
+    {
+      "name": "Tasa de reapertura de defectos",
+      "formula": "(Defectos reabiertos / Defectos resueltos) x 100",
+      "target": "< 5%",
+      "actual": "0%",
+      "numericValue": 0,
+      "met": true
+    },
+    {
+      "name": "Cobertura de requisitos",
+      "formula": "(Requisitos cubiertos / Total requisitos) x 100",
+      "target": "100%",
+      "actual": "100%",
+      "numericValue": 100,
+      "met": true
+    }
+  ],
+  "byModule": {
+    "AUTH": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "CAT": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "CAR": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    "CHK": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "CUS": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "PRD": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "ORD": {
+      "total": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    "INV": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    "PRM": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0
+    }
+  },
+  "bySurface": {
+    "Storefront": {
+      "total": 22,
+      "passed": 22,
+      "failed": 0
+    },
+    "Admin": {
+      "total": 23,
+      "passed": 23,
+      "failed": 0
+    }
+  },
+  "byMode": {
+    "Manual": {
+      "total": 18,
+      "passed": 18,
+      "failed": 0
+    },
+    "Automatizado": {
+      "total": 27,
+      "passed": 27,
+      "failed": 0
+    }
+  }
+}

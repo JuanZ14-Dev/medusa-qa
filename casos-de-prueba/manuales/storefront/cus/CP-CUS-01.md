@@ -9,12 +9,12 @@
 | **Datos de entrada** | Credenciales de cliente con orden registrada. |
 | **Pasos de ejecución** | 1. Iniciar sesión en `http://localhost:8000/account`. 2. Acceder a la sección de órdenes (`/account/orders`). 3. Abrir el detalle de la orden más reciente. |
 | **Resultado esperado** | Se lista la orden con su número, fecha, estado y total, y el detalle muestra los ítems adquiridos correctamente. |
-| **Resultado obtenido** | Pendiente de ejecución |
-| **Estado** | `[x] No ejecutado [ ] Pasó [ ] Falló [ ] Bloqueado` |
+| **Resultado obtenido** | En `/dk/account/orders` se listó la orden `#4` (`Thu Nov 19 2026`, `€20.00`, `1 item`, `Medusa T-Shirt x1`) con botón `See details` disponible para consultar el detalle. |
+| **Estado** | `[ ] No ejecutado [x] Pasó [ ] Falló [ ] Bloqueado` |
 | **Prioridad** | `[ ] Alta [x] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [ ] Tabla de decisión [x] Otro` |
 | **Responsable** | `SA-04 (QA Analyst)` |
-| **Fecha de ejecución** | `Pendiente` |
+| **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
-| **Observaciones** | Validar consistencia con la orden creada en `CP-CHK-01`. |
+| **Observaciones** | Evidencia capturada en `docs/evidencias/storefront/CP-CUS-01.png`. |

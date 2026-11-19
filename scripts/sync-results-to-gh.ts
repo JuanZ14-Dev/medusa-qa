@@ -10,14 +10,17 @@ interface IssueMapEntry {
   issueNumber: number
   url: string
   mode: string
+  file: string
 }
 
 const REPO = process.env.GITHUB_REPOSITORY || "JuanZ14-Dev/medusa-qa"
 const MAP_PATH = path.resolve("casos-de-prueba/github-issues-map.json")
 const RESULTS_PATH = path.resolve("reports/results.json")
 
-function collectAutomatedStatuses(): Map<string, "passed" | "failed"> {
-  const statusMap = new Map<string, "passed" | "failed">()
+type CaseStatus = "passed" | "failed" | "blocked"
+
+function collectAutomatedStatuses(): Map<string, CaseStatus> {
+  const statusMap = new Map<string, CaseStatus>()
   if (!fs.existsSync(RESULTS_PATH)) return statusMap
 
   const report = JSON.parse(fs.readFileSync(RESULTS_PATH, "utf8"))
@@ -31,7 +34,9 @@ function collectAutomatedStatuses(): Map<string, "passed" | "failed"> {
     for (const spec of suite.specs || []) {
       const m = spec.title.match(/(CP-[A-Z]+-\d+)/)
       if (m) {
-        statusMap.set(m[1], spec.ok ? "passed" : "failed")
+        const prev = statusMap.get(m[1])
+        const next: CaseStatus = spec.ok ? "passed" : "failed"
+        statusMap.set(m[1], prev === "failed" ? "failed" : next)
       }
     }
     for (const child of (suite.suites as typeof suite[]) || []) {
@@ -46,6 +51,24 @@ function collectAutomatedStatuses(): Map<string, "passed" | "failed"> {
   return statusMap
 }
 
+function collectManualStatuses(issueMap: IssueMapEntry[]): Map<string, CaseStatus> {
+  const statusMap = new Map<string, CaseStatus>()
+  for (const entry of issueMap) {
+    if (entry.mode !== "Manual") continue
+    const absFile = path.resolve(entry.file)
+    if (!fs.existsSync(absFile)) continue
+    const content = fs.readFileSync(absFile, "utf8")
+    if (/\[x\]\s*Pas[oó]/i.test(content)) {
+      statusMap.set(entry.id, "passed")
+    } else if (/\[x\]\s*Fall[oó]/i.test(content)) {
+      statusMap.set(entry.id, "failed")
+    } else if (/\[x\]\s*Bloqueado/i.test(content)) {
+      statusMap.set(entry.id, "blocked")
+    }
+  }
+  return statusMap
+}
+
 function main(): void {
   if (!fs.existsSync(MAP_PATH)) {
     throw new Error("No existe casos-de-prueba/github-issues-map.json. Ejecute gh:sync-cases primero.")
@@ -53,12 +76,17 @@ function main(): void {
 
   const issueMap: IssueMapEntry[] = JSON.parse(fs.readFileSync(MAP_PATH, "utf8"))
   const autoStatuses = collectAutomatedStatuses()
+  const manualStatuses = collectManualStatuses(issueMap)
 
+  let syncedCount = 0
   for (const entry of issueMap) {
-    const status = autoStatuses.get(entry.id)
+    const status =
+      entry.mode === "Manual"
+        ? manualStatuses.get(entry.id)
+        : autoStatuses.get(entry.id)
     if (!status) continue
 
-    const nextLabel = status === "passed" ? "status:passed" : "status:failed"
+    const nextLabel = `status:${status}`
     execFileSync(
       "gh",
       [
@@ -75,6 +103,11 @@ function main(): void {
       { stdio: "inherit" }
     )
 
+    const commentBody =
+      entry.mode === "Manual"
+        ? `Actualización de ejecución manual (${entry.id}, 19/11/2026): estado **${status.toUpperCase()}** (evidencia en \`docs/evidencias/\`).`
+        : `Actualización automática de ejecución Playwright (${entry.id}, 19/11/2026): estado **${status.toUpperCase()}**.`
+
     execFileSync(
       "gh",
       [
@@ -84,13 +117,14 @@ function main(): void {
         "--repo",
         REPO,
         "--body",
-        `Actualización automática de ejecución (${entry.id}): estado **${status.toUpperCase()}**.`,
+        commentBody,
       ],
       { stdio: "inherit" }
     )
+    syncedCount += 1
   }
 
-  console.log(`Sincronización de resultados completada para ${autoStatuses.size} casos automatizados.`)
+  console.log(`Sincronización completada para ${syncedCount} casos de prueba en GitHub Issues.`)
 }
 
 main()

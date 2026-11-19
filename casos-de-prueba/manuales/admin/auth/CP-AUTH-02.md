@@ -9,12 +9,12 @@
 | **Datos de entrada** | Correo: `admin@medusa-test.com`, Contraseña: `supersecret`. |
 | **Pasos de ejecución** | 1. Navegar a `http://localhost:9000/app`. 2. Ingresar correo y contraseña de administrador. 3. Hacer clic en continuar / iniciar sesión. 4. Verificar acceso al tablero principal. 5. Abrir menú de usuario y seleccionar cerrar sesión. |
 | **Resultado esperado** | El administrador ingresa al panel principal sin errores y, al cerrar sesión, es redirigido a la pantalla de login perdiendo acceso a rutas internas. |
-| **Resultado obtenido** | Pendiente de ejecución |
-| **Estado** | `[x] No ejecutado [ ] Pasó [ ] Falló [ ] Bloqueado` |
+| **Resultado obtenido** | El administrador `admin@medusa-test.com` inició sesión correctamente y accedió al tablero principal (`/app/orders`). Al seleccionar cerrar sesión en el menú de usuario, la sesión finalizó y fue redirigido a `/app/login`. |
+| **Estado** | `[ ] No ejecutado [x] Pasó [ ] Falló [ ] Bloqueado` |
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[x] EP [ ] BVA [ ] Tabla de decisión [ ] Otro` |
 | **Responsable** | `SA-05 (QA Analyst)` |
-| **Fecha de ejecución** | `Pendiente` |
+| **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
-| **Observaciones** | Caso manual base de acceso administrativo (`:9000/app`). |
+| **Observaciones** | Evidencias en `docs/evidencias/admin/CP-AUTH-02-login-dashboard.png` y `docs/evidencias/admin/CP-AUTH-02-logout.png`. |

@@ -9,12 +9,12 @@
 | **Datos de entrada** | Combinación de opciones: Talla `M` / Color `Black` y luego Talla `L` / Color `White`. |
 | **Pasos de ejecución** | 1. Ingresar al detalle de un producto con variantes. 2. Seleccionar la primera combinación de talla y color. 3. Cambiar a la segunda combinación. 4. Observar el precio y la disponibilidad del botón de compra. |
 | **Resultado esperado** | El selector refleja la variante activa, actualiza el precio correspondiente y habilita el botón de añadir al carrito si hay stock. |
-| **Resultado obtenido** | Pendiente de ejecución |
-| **Estado** | `[x] No ejecutado [ ] Pasó [ ] Falló [ ] Bloqueado` |
+| **Resultado obtenido** | Al seleccionar `M / Black` y luego `L / White` en `Medusa T-Shirt`, el selector actualizó la variante activa, mostró disponibilidad `In stock`, precio `€10.00` y mantuvo habilitado el botón `Add to cart`. |
+| **Estado** | `[ ] No ejecutado [x] Pasó [ ] Falló [ ] Bloqueado` |
 | **Prioridad** | `[ ] Alta [x] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [x] Tabla de decisión [ ] Otro` |
 | **Responsable** | `SA-04 (QA Analyst)` |
-| **Fecha de ejecución** | `Pendiente` |
+| **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
-| **Observaciones** | Verificar combinaciones válidas e inválidas de opciones. |
+| **Observaciones** | Evidencia capturada en `docs/evidencias/storefront/CP-CAT-02.png`. |
