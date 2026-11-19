@@ -1,0 +1,124 @@
+name: "Reporte de Defecto (DEF-*)"
+description: "Plantilla oficial de 17 campos de la Sección 8.2 del Plan de Pruebas"
+title: "[DEF-XXX] Descripción corta del defecto"
+labels: ["type:defect"]
+body:
+  - type: input
+    id: id_defecto
+    attributes:
+      label: "1. ID del defecto"
+      placeholder: "DEF-001"
+    validations:
+      required: true
+  - type: input
+    id: titulo
+    attributes:
+      label: "2. Título"
+    validations:
+      required: true
+  - type: input
+    id: caso_relacionado
+    attributes:
+      label: "3. Caso de prueba relacionado"
+      placeholder: "CP-XXX-XX"
+    validations:
+      required: true
+  - type: input
+    id: modulo_afectado
+    attributes:
+      label: "4. Módulo afectado"
+    validations:
+      required: true
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: "5. Severidad"
+      options:
+        - "Crítica"
+        - "Alta"
+        - "Media"
+        - "Baja"
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: "6. Prioridad"
+      options:
+        - "Alta"
+        - "Media"
+        - "Baja"
+    validations:
+      required: true
+  - type: dropdown
+    id: estado
+    attributes:
+      label: "7. Estado"
+      options:
+        - "Nuevo"
+        - "Asignado"
+        - "En progreso"
+        - "Resuelto"
+        - "Cerrado"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "8. Descripción"
+    validations:
+      required: true
+  - type: textarea
+    id: pasos_reproducir
+    attributes:
+      label: "9. Pasos para reproducir"
+    validations:
+      required: true
+  - type: textarea
+    id: resultado_esperado
+    attributes:
+      label: "10. Resultado esperado"
+    validations:
+      required: true
+  - type: textarea
+    id: resultado_obtenido
+    attributes:
+      label: "11. Resultado obtenido"
+    validations:
+      required: true
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: "12. Evidencia"
+      placeholder: "Captura de pantalla / log / video"
+    validations:
+      required: true
+  - type: input
+    id: entorno
+    attributes:
+      label: "13. Entorno"
+      placeholder: "Navegador / SO / Versión del sistema"
+    validations:
+      required: true
+  - type: input
+    id: reportado_por
+    attributes:
+      label: "14. Reportado por"
+    validations:
+      required: true
+  - type: input
+    id: fecha_reporte
+    attributes:
+      label: "15. Fecha de reporte"
+      placeholder: "DD/MM/AAAA"
+    validations:
+      required: true
+  - type: input
+    id: asignado_a
+    attributes:
+      label: "16. Asignado a"
+  - type: input
+    id: fecha_resolucion
+    attributes:
+      label: "17. Fecha de resolución"
+      placeholder: "DD/MM/AAAA"

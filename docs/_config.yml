@@ -1,0 +1,6 @@
+title: "QA Medusa — Plan de Pruebas, Dashboard y Análisis de Calidad"
+description: "Proyecto universitario de Aseguramiento de Calidad (QA) sobre Medusa Storefront y Admin bajo normas APA 7.ª edición."
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag

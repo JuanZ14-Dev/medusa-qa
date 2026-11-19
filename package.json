@@ -1,0 +1,24 @@
+{
+  "name": "medusa-qa",
+  "version": "1.0.0",
+  "description": "Proyecto universitario de Aseguramiento de Calidad (QA) para Medusa Storefront y Admin",
+  "private": true,
+  "scripts": {
+    "test:e2e": "playwright test",
+    "test:storefront": "playwright test --project=storefront",
+    "test:admin": "playwright test --project=admin",
+    "typecheck": "tsc --noEmit",
+    "gh:labels": "npx tsx scripts/setup-github-labels.ts",
+    "gh:sync-cases": "npx tsx scripts/sync-test-cases-to-gh.ts",
+    "gh:sync-results": "npx tsx scripts/sync-results-to-gh.ts",
+    "metrics:generate": "npx tsx scripts/generate-metrics.ts",
+    "docs:validate": "npx tsx scripts/validate-apa7.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^22.10.0",
+    "dotenv": "^16.4.7",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,117 @@
+name: "Caso de Prueba (CP-*)"
+description: "Plantilla oficial de 16 campos de la Sección 7.1 del Plan de Pruebas"
+title: "[CP-MOD-XX] Nombre del caso de prueba"
+labels: ["type:test-case", "status:not-executed"]
+body:
+  - type: input
+    id: id_caso
+    attributes:
+      label: "1. ID del caso"
+      placeholder: "CP-AUTH-01"
+    validations:
+      required: true
+  - type: input
+    id: nombre
+    attributes:
+      label: "2. Nombre"
+    validations:
+      required: true
+  - type: input
+    id: historia_usuario
+    attributes:
+      label: "3. Historia de usuario"
+      placeholder: "HU-01 — Título de la historia"
+    validations:
+      required: true
+  - type: textarea
+    id: precondiciones
+    attributes:
+      label: "4. Precondiciones"
+    validations:
+      required: true
+  - type: textarea
+    id: datos_entrada
+    attributes:
+      label: "5. Datos de entrada"
+    validations:
+      required: true
+  - type: textarea
+    id: pasos_ejecucion
+    attributes:
+      label: "6. Pasos de ejecución"
+    validations:
+      required: true
+  - type: textarea
+    id: resultado_esperado
+    attributes:
+      label: "7. Resultado esperado"
+    validations:
+      required: true
+  - type: textarea
+    id: resultado_obtenido
+    attributes:
+      label: "8. Resultado obtenido"
+      value: "Pendiente de ejecución"
+  - type: dropdown
+    id: estado
+    attributes:
+      label: "9. Estado"
+      options:
+        - "No ejecutado"
+        - "Pasó"
+        - "Falló"
+        - "Bloqueado"
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: "10. Prioridad"
+      options:
+        - "Alta"
+        - "Media"
+        - "Baja"
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo_prueba
+    attributes:
+      label: "11. Tipo de prueba"
+      options:
+        - "Funcional"
+        - "Regresión"
+        - "Integración"
+        - "Otro"
+    validations:
+      required: true
+  - type: dropdown
+    id: tecnica_aplicada
+    attributes:
+      label: "12. Técnica aplicada"
+      options:
+        - "EP"
+        - "BVA"
+        - "Tabla de decisión"
+        - "Otro"
+    validations:
+      required: true
+  - type: input
+    id: responsable
+    attributes:
+      label: "13. Responsable"
+    validations:
+      required: true
+  - type: input
+    id: fecha_ejecucion
+    attributes:
+      label: "14. Fecha de ejecución"
+      placeholder: "DD/MM/AAAA"
+  - type: input
+    id: defectos_asociados
+    attributes:
+      label: "15. Defectos asociados"
+      value: "N/A"
+  - type: textarea
+    id: observaciones
+    attributes:
+      label: "16. Observaciones"
