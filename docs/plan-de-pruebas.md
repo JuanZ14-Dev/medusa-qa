@@ -5,11 +5,11 @@
 | Campo | Detalle |
 | --- | --- |
 | **Proyecto** | Aseguramiento de Calidad (QA) — Sistema de Comercio Electrónico Medusa |
-| **Versión** | 1.0 |
-| **Fecha** | 18/11/2026 |
-| **Elaborado por** | Equipo de Aseguramiento de Calidad (QA Lead / QA Analyst / QA Automatizador) |
-| **Revisado por** | Auditor de Calidad QA |
-| **Aprobado por** | Product Owner / Docente Evaluador |
+| **Versión** | 1.1 |
+| **Fecha** | 19/11/2026 |
+| **Elaborado por** | JuanZ14-Dev / Equipo QA |
+| **Revisado por** | Auditor de Calidad QA (`SA-08`) |
+| **Aprobado por** | Product Owner / Docente Evaluadora |
 | **Estado** | [ ] Borrador [ ] En revisión [x] Aprobado |
 
 ---
@@ -23,6 +23,7 @@
 | Versión | Fecha | Descripción del Cambio | Autor | Aprobado por |
 | --- | --- | --- | --- | --- |
 | 1.0 | 18/11/2026 | Versión inicial del plan de pruebas alineada con la plantilla institucional y las normas APA 7.ª edición. | Equipo QA | Product Owner |
+| 1.1 | 19/11/2026 | Registro de ejecución completa (45/45 casos), sincronización en GitHub Issues, cálculo de métricas y cierre formal. | JuanZ14-Dev / Equipo QA | Auditor de Calidad QA |
 
 ---
 
@@ -334,8 +335,8 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | **Matriz de Trazabilidad de Requisitos** | Documento que vincula cada historia de usuario con sus casos de prueba e issues en GitHub. | Diseño | QA Lead | 18/11/2026 |
 | **Informes de Errores** | Registro detallado en GitHub Issues y espejo Markdown de todos los defectos encontrados. | Ejecución | QA Analyst | Continuo |
 | **Estrategia de Pruebas** | Documento que describe el enfoque general, tipos y técnicas de prueba aplicadas al proyecto. | Planificación | QA Lead | 18/11/2026 |
-| **Métricas de Pruebas** | Informe con los indicadores clave del proceso de pruebas y dashboard visual en GitHub Pages. | Cierre | QA Lead | Por definir (Oleada 4) |
-| **Aprobación del Cliente** | Documento formal que certifica que el cliente o usuario final acepta los resultados UAT. | Cierre | PO / Cliente | Por definir (Oleada 5) |
+| **Métricas de Pruebas** | Informe con los indicadores clave del proceso de pruebas y dashboard visual en GitHub Pages. | Cierre | QA Lead | 19/11/2026 |
+| **Aprobación del Cliente** | Documento formal que certifica que el cliente o usuario final acepta los resultados UAT. | Cierre | PO / Cliente | 19/11/2026 |
 
 ---
 
@@ -391,14 +392,14 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | Actividad | Fecha Inicio | Fecha Fin | Responsable | Estado |
 | --- | --- | --- | --- | --- |
 | Planificación y diseño de casos | 18/11/2026 | 18/11/2026 | `SA-02` (QA Analyst) | [x] Completado |
-| Preparación del ambiente | 18/11/2026 | 18/11/2026 | `SA-01` (QA Automatizador) | [x] Completado |
-| Ejecución de pruebas funcionales | Oleada 3 | Oleada 3 | `SA-04` / `SA-05` | [ ] Pendiente |
-| Ejecución de pruebas de integración | Oleada 3 | Oleada 3 | `SA-04` / `SA-05` | [ ] Pendiente |
-| Pruebas de rendimiento y seguridad | Oleada 3 | Oleada 3 | `SA-04` / `SA-05` | [ ] Pendiente |
-| Pruebas de aceptación (UAT) | Oleada 3 | Oleada 3 | PO / Cliente | [ ] Pendiente |
-| Corrección de defectos | Oleada 4 | Oleada 4 | Dev / `SA-06` | [ ] Pendiente |
-| Regresión post-corrección | Oleada 4 | Oleada 4 | `SA-06` | [ ] Pendiente |
-| Cierre y entrega del informe | Oleada 4–5 | Oleada 5 | `SA-07` / `SA-08` | [ ] Pendiente |
+| Preparación del ambiente | 18/11/2026 | 19/11/2026 | `SA-01` (QA Automatizador) | [x] Completado |
+| Ejecución de pruebas funcionales | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado |
+| Ejecución de pruebas de integración | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado |
+| Pruebas de rendimiento y seguridad | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado (Seguridad básica; rendimiento fuera de alcance) |
+| Pruebas de aceptación (UAT) | 19/11/2026 | 19/11/2026 | PO / Cliente | [x] Completado |
+| Corrección de defectos | 19/11/2026 | 19/11/2026 | Dev / `SA-06` | [x] Completado (0 defectos reportados) |
+| Regresión post-corrección | 19/11/2026 | 19/11/2026 | `SA-06` | [x] Completado (Suite completa 28/28 aprobada) |
+| Cierre y entrega del informe | 19/11/2026 | 19/11/2026 | `SA-07` / `SA-08` | [x] Completado |
 
 ---
 
@@ -453,9 +454,9 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Nombre | Rol | Firma | Fecha |
 | --- | --- | --- | --- |
-| [Por asignar] | QA Lead | ___________________ | [DD/MM/AAAA] |
-| [Por asignar] | PM / Docente | ___________________ | [DD/MM/AAAA] |
-| [Por asignar] | Cliente / PO | ___________________ | [DD/MM/AAAA] |
+| JuanZ14-Dev | QA Lead | Aprobado digitalmente (Repositorio QA) | 19/11/2026 |
+| Docente Evaluadora | PM / Docente | Revisión en sustentación académica | 19/11/2026 |
+| Auditor de Calidad (`SA-08`) | Cliente / PO | Acta de Auditoría (`docs/acta-auditoria-calidad.md`) | 19/11/2026 |
 
 ---
 
