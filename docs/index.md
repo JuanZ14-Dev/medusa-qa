@@ -14,7 +14,6 @@ Bienvenido al portal documental del proyecto de Aseguramiento de Calidad (QA) ap
 - [Informe Final de Calidad (APA 7.ª edición)](./informe-final-calidad.md)
 - [Matriz de Trazabilidad de Requisitos](./matriz-trazabilidad.md)
 - [Acta de Auditoría de Calidad](./acta-auditoria-calidad.md)
-- [Guía de Sustentación Académica](./guia-sustentacion.md)
 - [Referencias (APA 7.ª edición)](./referencias-apa7.md)
 
 **Tabla 1**
