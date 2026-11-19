@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Visual de Métricas — QA Medusa</title>
+  <link rel="stylesheet" href="./assets/css/custom.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.25rem;
+      color: #24292f;
+      background: #f6f8fa;
+    }
+    h1, h2 { color: #1f2328; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      margin: 1rem 0 2rem 0;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+    }
+    th { background: #eaeef2; }
+    .note { font-size: 0.9rem; color: #57606a; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <h1>Dashboard Visual de Métricas de Calidad — Medusa QA</h1>
+  <p>Indicadores calculados a partir de la ejecución real de 45 casos de prueba (18 manuales y 27 automatizados) sobre <code>http://localhost:8000</code> (Storefront) y <code>http://localhost:9000/app</code> (Admin).</p>
+
+  <div id="kpi-cards" class="kpi-grid"></div>
+
+  <div class="charts-grid">
+    <div class="chart-box"><canvas id="chart-modules"></canvas></div>
+    <div class="chart-box"><canvas id="chart-surfaces"></canvas></div>
+  </div>
+
+  <p><strong>Tabla 1</strong></p>
+  <p><em>Indicadores clave de calidad consolidados (Sección 13 del Plan de Pruebas)</em></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Métrica</th>
+        <th>Fórmula / Medición</th>
+        <th>Meta</th>
+        <th>Valor Actual</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Tasa de ejecución de casos</td><td><code>(45 / 45) x 100</code></td><td>&gt;= 95 %</td><td>100 %</td><td>Cumplido</td></tr>
+      <tr><td>Tasa de casos aprobados</td><td><code>(45 / 45) x 100</code></td><td>&gt;= 90 %</td><td>100 %</td><td>Cumplido</td></tr>
+      <tr><td>Densidad de defectos</td><td><code>0 / 45</code></td><td>&lt; 0.1</td><td>0.00</td><td>Cumplido</td></tr>
+      <tr><td>Defectos críticos abiertos</td><td>Conteo de defectos críticos sin resolver</td><td>= 0</td><td>0</td><td>Cumplido</td></tr>
+      <tr><td>Tasa de reapertura de defectos</td><td><code>(0 / 0) x 100</code></td><td>&lt; 5 %</td><td>0 %</td><td>Cumplido</td></tr>
+      <tr><td>Cobertura de requisitos</td><td><code>(10 / 10) x 100</code></td><td>100 %</td><td>100 %</td><td>Cumplido</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><em>Nota.</em> Fuente: <code>docs/assets/data/metrics.json</code> y sincronización de GitHub Issues en <code>JuanZ14-Dev/medusa-qa</code>.</p>
+
+  <h2>Flujo de Ejecución Multiagente</h2>
+  <div class="mermaid">
+    flowchart LR
+      SA01["Oleada 1: SA-01 Bootstrap"] --> SA02["Oleada 2A: SA-02 Plan y 45 Casos"]
+      SA02 --> SA03["Oleada 2B: SA-03 45 GitHub Issues"]
+      SA03 --> SA04["Oleada 3A: SA-04 Storefront (22 casos)"]
+      SA03 --> SA05["Oleada 3B: SA-05 Admin (23 casos)"]
+      SA04 --> SA06["Oleada 4A: SA-06 Sincronización y Defectos"]
+      SA05 --> SA06
+      SA06 --> SA07["Oleada 4B: SA-07 Métricas, Dashboard e Informe"]
+      SA07 --> SA08["Oleada 5: SA-08 Auditoría APA 7.ª"]
+  </div>
+
+  <script src="./assets/js/dashboard-charts.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+</body>
+</html>
