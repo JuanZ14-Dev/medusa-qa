@@ -80,13 +80,13 @@ El alcance de las pruebas abarca los flujos críticos de negocio tanto para el c
 
 | Rol | Nombre / Asignado a | Responsabilidades | Participación |
 | --- | --- | --- | --- |
-| **QA Lead / Líder de Pruebas** | Agente Coordinador / QA Lead | Planificar, coordinar y supervisar todas las actividades de prueba. Revisar y aprobar casos de prueba. Gestionar el equipo QA. Reportar avances al PM. | 100 % |
-| **QA Analyst / Analista de Pruebas** | Subagente Especialista (`SA-02` / `SA-06`) | Diseñar y documentar casos de prueba. Ejecutar pruebas funcionales manuales y de regresión. Registrar y dar seguimiento a defectos en GitHub Issues. | 100 % |
-| **QA Automatizador** | Subagentes Implementadores (`SA-01`, `SA-03`, `SA-04`, `SA-05`, `SA-07`) | Desarrollar y mantener scripts de automatización en Playwright + TypeScript. Ejecutar suite de pruebas automatizadas. Integrar pruebas y dashboard al pipeline CI/CD. | 100 % |
-| **Desarrollador / Dev** | Equipo de Desarrollo SUT | Corregir defectos reportados. Ejecutar pruebas unitarias. Apoyar en la configuración del ambiente de pruebas local (`:8000` y `:9000`). | 50 % |
+| **QA Lead / Líder de Pruebas** | Juanes| Planificar, coordinar y supervisar todas las actividades de prueba. Revisar y aprobar casos de prueba. Gestionar el equipo QA. Reportar avances al PM. | 100 % |
+| **QA Analyst / Analista de Pruebas** | julian cardona | Diseñar y documentar casos de prueba. Ejecutar pruebas funcionales manuales y de regresión. Registrar y dar seguimiento a defectos en GitHub Issues. | 100 % |
+| **QA Automatizador** | cesar julio | Desarrollar y mantener scripts de automatización en Playwright + TypeScript. Ejecutar suite de pruebas automatizadas. Integrar pruebas y dashboard al pipeline CI/CD. | 100 % |
+| **Desarrollador / Dev** | juanes | Corregir defectos reportados. Ejecutar pruebas unitarias. Apoyar en la configuración del ambiente de pruebas local (`:8000` y `:9000`). | 50 % |
 | **Product Owner / PO** | Docente / Cliente del Proyecto | Validar criterios de aceptación. Participar en pruebas UAT. Aprobar el cierre del ciclo de pruebas. | 25 % |
 | **Usuario Final / Cliente** | Evaluador Externo / Usuario Simulado | Participar en pruebas de aceptación (UAT). Validar que el sistema cumple sus expectativas y necesidades de negocio. | 25 % |
-| **Auditor de Calidad QA** | Subagente Auditor (`SA-08`) | Auditar el cumplimiento de normas APA 7.ª edición, la integridad de evidencias y la coherencia entre métricas y reportes reales. | 50 % |
+| **Auditor de Calidad QA** | cesar julio | Auditar el cumplimiento de normas APA 7.ª edición, la integridad de evidencias y la coherencia entre métricas y reportes reales. | 50 % |
 
 ### 4.1 Matriz RACI
 
