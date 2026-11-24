@@ -10,7 +10,9 @@ Bienvenido al portal documental del proyecto de Aseguramiento de Calidad (QA) ap
 ## Navegación de Entregables
 
 - [Plan de Pruebas (Secciones 1–14)](./plan-de-pruebas.md)
-- [Dashboard Visual de Métricas](./dashboard.md)
+- [Plan de Pruebas Oficial (PDF)](./Plan_de_Pruebas_Medusa_QA.pdf)
+- [Dashboard Visual de Métricas (Web)](./dashboard.md)
+- [Libro Excel de Casos y Dashboard (`.xlsx`)](https://github.com/JuanZ14-Dev/medusa-qa/blob/main/casos-de-prueba/casos-de-prueba-medusa.xlsx)
 - [Informe Final de Calidad (APA 7.ª edición)](./informe-final-calidad.md)
 - [Matriz de Trazabilidad de Requisitos](./matriz-trazabilidad.md)
 - [Acta de Auditoría de Calidad](./acta-auditoria-calidad.md)

@@ -31,7 +31,7 @@ Este tablero presenta los indicadores clave de rendimiento (KPI) calculados a pa
 | Tasa de reapertura de defectos | `(0 / 5) x 100` | < 5 % | 0 % | Cumplido |
 | Cobertura de requisitos | `(10 / 10) x 100` | 100 % | 100 % | Cumplido |
 
-*Nota.* Datos fuente generados automáticamente en [`docs/assets/data/metrics.json`](./assets/data/metrics.json).
+*Nota.* Datos fuente generados automáticamente en [`docs/assets/data/metrics.json`](./assets/data/metrics.json). También puede consultarse el tablero interactivo con segmentadores de datos y gráficos dinámicos en la hoja `Dashboard` de [`casos-de-prueba-medusa.xlsx`](https://github.com/JuanZ14-Dev/medusa-qa/blob/main/casos-de-prueba/casos-de-prueba-medusa.xlsx).
 
 ## Flujo del Ciclo de Pruebas QA
 
