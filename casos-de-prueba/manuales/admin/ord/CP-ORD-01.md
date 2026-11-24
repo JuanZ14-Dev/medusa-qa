@@ -14,7 +14,7 @@
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[ ] Funcional [ ] Regresión [x] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [ ] Tabla de decisión [x] Otro` |
-| **Responsable** | `SA-05 (QA Analyst)` |
+| **Responsable** | `Julián Cardona (QA — Ejecución Admin)` |
 | **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
 | **Observaciones** | Evidencia en `docs/evidencias/admin/CP-ORD-01-orden-detalle.png`. |

@@ -5,10 +5,10 @@
 | Campo | Detalle |
 | --- | --- |
 | **Proyecto** | Aseguramiento de Calidad (QA) — Sistema de Comercio Electrónico Medusa |
-| **Versión** | 1.1 |
-| **Fecha** | 19/11/2026 |
-| **Elaborado por** | JuanZ14-Dev / Equipo QA |
-| **Revisado por** | Auditor de Calidad QA (`SA-08`) |
+| **Versión** | 1.2 |
+| **Fecha** | 23/11/2026 |
+| **Elaborado por** | Juanes Zapata, César Julio y Julián Cardona |
+| **Revisado por** | Juanes Zapata (QA Lead) / Revisión por pares del equipo QA |
 | **Aprobado por** | Product Owner / Docente Evaluadora |
 | **Estado** | [ ] Borrador [ ] En revisión [x] Aprobado |
 
@@ -23,7 +23,8 @@
 | Versión | Fecha | Descripción del Cambio | Autor | Aprobado por |
 | --- | --- | --- | --- | --- |
 | 1.0 | 18/11/2026 | Versión inicial del plan de pruebas alineada con la plantilla institucional y las normas APA 7.ª edición. | Equipo QA | Product Owner |
-| 1.1 | 19/11/2026 | Registro de ejecución completa (45/45 casos), sincronización en GitHub Issues, cálculo de métricas y cierre formal. | JuanZ14-Dev / Equipo QA | Auditor de Calidad QA |
+| 1.1 | 19/11/2026 | Registro inicial de ejecución (45/45 casos), cálculo de métricas y cierre preliminar. | Equipo QA | Juanes Zapata (QA Lead) |
+| 1.2 | 23/11/2026 | Actualización integral: equipo real (Juanes Zapata, César Julio y Julián Cardona), libro Excel de 51 casos, dedicación exclusiva de GitHub Issues a defectos (`DEF-001` a `DEF-005`), inspección en vivo e inyección controlada con cierre por regresión. | Equipo QA | Juanes Zapata (QA Lead) |
 
 ---
 
@@ -68,7 +69,7 @@ El alcance de las pruebas abarca los flujos críticos de negocio tanto para el c
 | --- | --- | --- |
 | 1 | Verificar que todas las funcionalidades cumplen los requisitos especificados. | 100 % de los casos de prueba críticos pasan. |
 | 2 | Identificar y documentar defectos antes del despliegue a producción. | 0 defectos críticos abiertos al cierre. |
-| 3 | Garantizar la trazabilidad integral y automatización reproducible de los flujos críticos en GitHub. | 45 casos de prueba (18 manuales y 27 automatizados) registrados y sincronizados en GitHub Issues. |
+| 3 | Garantizar la trazabilidad integral y automatización reproducible de los flujos críticos en Excel y GitHub. | 51 casos de prueba (18 manuales y 33 automatizados / 34 pruebas Playwright) documentados en libro Excel y matriz de trazabilidad, y 100 % de los defectos (`DEF-*`) gestionados en GitHub Issues. |
 
 ---
 
@@ -80,13 +81,13 @@ El alcance de las pruebas abarca los flujos críticos de negocio tanto para el c
 
 | Rol | Nombre / Asignado a | Responsabilidades | Participación |
 | --- | --- | --- | --- |
-| **QA Lead / Líder de Pruebas** | Agente Coordinador / QA Lead | Planificar, coordinar y supervisar todas las actividades de prueba. Revisar y aprobar casos de prueba. Gestionar el equipo QA. Reportar avances al PM. | 100 % |
-| **QA Analyst / Analista de Pruebas** | Subagente Especialista (`SA-02` / `SA-06`) | Diseñar y documentar casos de prueba. Ejecutar pruebas funcionales manuales y de regresión. Registrar y dar seguimiento a defectos en GitHub Issues. | 100 % |
-| **QA Automatizador** | Subagentes Implementadores (`SA-01`, `SA-03`, `SA-04`, `SA-05`, `SA-07`) | Desarrollar y mantener scripts de automatización en Playwright + TypeScript. Ejecutar suite de pruebas automatizadas. Integrar pruebas y dashboard al pipeline CI/CD. | 100 % |
+| **QA Lead / Líder de Pruebas** | Juanes Zapata | Planificar, coordinar y supervisar todas las actividades de prueba; definir la matriz RACI; calcular métricas automatizadas; administrar el dashboard visual en GitHub Pages y liderar la auditoría de cierre. | 100 % |
+| **QA Analyst / Analista de Pruebas** | César Julio | Diseñar y documentar casos de prueba manuales y libro Excel oficial; ejecutar pruebas funcionales en Storefront (`:8000`); recolectar evidencias visuales y consolidar documentación bajo normas APA 7.ª edición. | 100 % |
+| **QA Automatizador & Gestión de Defectos** | Julián Cardona | Desarrollar y mantener scripts de automatización en Playwright + TypeScript; ejecutar pruebas en Admin (`:9000/app`) y Storefront; reportar, evidenciar y dar seguimiento de cierre por regresión a defectos `DEF-*` en GitHub Issues. | 100 % |
 | **Desarrollador / Dev** | Equipo de Desarrollo SUT | Corregir defectos reportados. Ejecutar pruebas unitarias. Apoyar en la configuración del ambiente de pruebas local (`:8000` y `:9000`). | 50 % |
 | **Product Owner / PO** | Docente / Cliente del Proyecto | Validar criterios de aceptación. Participar en pruebas UAT. Aprobar el cierre del ciclo de pruebas. | 25 % |
 | **Usuario Final / Cliente** | Evaluador Externo / Usuario Simulado | Participar en pruebas de aceptación (UAT). Validar que el sistema cumple sus expectativas y necesidades de negocio. | 25 % |
-| **Auditor de Calidad QA** | Subagente Auditor (`SA-08`) | Auditar el cumplimiento de normas APA 7.ª edición, la integridad de evidencias y la coherencia entre métricas y reportes reales. | 50 % |
+| **Auditor de Calidad QA** | Juanes Zapata (QA Lead — Auditoría interna) | Auditar el cumplimiento de normas APA 7.ª edición, la integridad de evidencias y la coherencia entre métricas y reportes reales. | 50 % |
 
 ### 4.1 Matriz RACI
 
@@ -176,7 +177,7 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | Todos los defectos de regresión resueltos y verificados. | = 0 pendientes | 0 | [x] |
 | Informe de pruebas generado y entregado al equipo de proyecto. | Entregado | Entregado | [x] |
 | Aprobación formal del cierre de pruebas por el QA Lead y el PO. | Aprobado | Aprobado | [x] |
-| Sincronización completa de los 45 casos y defectos asociados en GitHub Issues. | 100 % | 100 % | [x] |
+| Trazabilidad completa de los 51 casos en Excel/matriz y gestión exclusiva de los 5 defectos (`DEF-001` a `DEF-005`) en GitHub Issues. | 100 % | 100 % | [x] |
 
 ---
 
@@ -190,9 +191,9 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | --- | --- |
 | Ambiente de pruebas configurado y disponible (`:8000` y `:9000/app`). | 100 % de los casos de prueba prioritarios ejecutados. |
 | Build estable del sistema entregado. | Tasa de defectos críticos = 0. |
-| Casos de prueba revisados y aprobados (45 casos). | Todos los defectos de severidad alta resueltos o documentados con plan. |
+| Casos de prueba revisados y aprobados (51 casos en libro Excel y matriz). | Todos los defectos de severidad alta resueltos o documentados con plan. |
 | Datos de prueba preparados (usuarios, productos e inventario). | Informe de pruebas generado y entregado en formato APA 7.ª edición. |
-| Repositorio GitHub configurado con etiquetas y 45 issues `CP-*` creados. | Dashboard visual publicado y auditoría de calidad aprobada. |
+| Repositorio GitHub configurado con plantilla oficial de 17 campos (`reporte-defecto.yml`) y etiquetas para defectos `DEF-*`. | Dashboard visual publicado y auditoría de calidad aprobada. |
 
 ---
 
@@ -227,7 +228,7 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 **Tabla 11**
 
-*Registro consolidado de los 45 casos de prueba del proyecto*
+*Registro consolidado de los 51 casos de prueba del proyecto*
 
 | ID | Nombre del Caso | Módulo | Prioridad | Estado | Defecto |
 | --- | --- | --- | --- | --- | --- |
@@ -236,6 +237,7 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | CP-AUTH-03 | Rechazo de login en Storefront con contraseña inválida | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-AUTH-04 | Autenticación válida e inválida en Admin (UI y API) | AUTH | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-AUTH-05 | Bloqueo de acceso sin sesión a rutas protegidas `/admin/products` | AUTH | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-AUTH-06 | Validación de enlaces legales de privacidad y términos en registro de Storefront | AUTH | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | DEF-001 (#46) |
 | CP-CAT-01 | Navegación y visualización de detalle de producto en Storefront | CAT | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CAT-02 | Selección de variantes (talla y color) y actualización de precio | CAT | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CAT-03 | Listado de productos mediante Storefront UI y API `/store/products` | CAT | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
@@ -246,16 +248,20 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | CP-CAR-03 | Incremento y decremento de cantidad con valores límite (BVA: 1 a 2) | CAR | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CAR-04 | Rechazo o corrección de cantidad cero o negativa en carrito (BVA: 0) | CAR | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CAR-05 | Consolidación automática al agregar el mismo SKU dos veces | CAR | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CAR-06 | Integridad de opciones únicas en selector de cantidad del carrito | CAR | [ ] Alta [ ] Media [x] Baja | [ ] No ej. [x] Pasó | DEF-002 (#47) |
 | CP-CHK-01 | Flujo completo de checkout hasta confirmación de orden | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CHK-02 | Validación de campos obligatorios en dirección de envío | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CHK-03 | Selección de método de envío y actualización de total en checkout | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CHK-04 | Validación de formato de correo y teléfono en checkout (EP) | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CHK-05 | Protección contra finalización de checkout con carrito vacío | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-CHK-06 | Verificación de creación de orden vía `/store/orders` tras pago | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CHK-07 | Validación responsiva de formulario y resumen de dirección en checkout móvil (375x812) | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | DEF-003 (#48) |
+| CP-CHK-08 | Validación de formato de teléfono en formulario de dirección de envío en checkout (EP) | CHK | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | DEF-003 (#48) |
+| CP-CHK-09 | Integridad del cálculo de total de orden con envío en resumen de checkout | CHK | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | DEF-004 (#49) |
 | CP-CUS-01 | Consulta de historial de órdenes en perfil de cliente | CUS | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
-| CP-CUS-02 | Registro y actualización de dirección de envío en perfil | CUS | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-02 | Registro y actualización de dirección de envío en perfil | CUS | [ ] Alta [ ] Media [x] Baja | [ ] No ej. [x] Pasó | N/A |
 | CP-CUS-03 | Actualización de datos personales de cuenta en Storefront | CUS | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
-| CP-CUS-04 | Aislamiento de sesión de cliente tras cierre de sesión | CUS | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-CUS-04 | Aislamiento de sesión de cliente tras cierre de sesión | CUS | [ ] Alta [ ] Media [x] Baja | [ ] No ej. [x] Pasó | N/A |
 | CP-PRD-01 | Creación manual de producto con variante y precio en Admin | PRD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-PRD-02 | Cambio de estado de producto de borrador a publicado en Admin | PRD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-PRD-03 | Creación y consulta de producto en Admin UI y `/admin/products` | PRD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
@@ -267,13 +273,14 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | CP-ORD-03 | Cancelación controlada de orden pendiente en Admin | ORD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-ORD-04 | Filtrado y búsqueda de órdenes por estado en Admin | ORD | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-ORD-05 | Consistencia de totales e impuestos de orden vía `/admin/orders` | ORD | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
-| CP-ORD-06 | Verificación de transición de estado de pago en detalle de orden | ORD | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-ORD-06 | Verificación de transición de estado de pago en detalle de orden | ORD | [ ] Alta [ ] Media [x] Baja | [ ] No ej. [x] Pasó | N/A |
 | CP-INV-01 | Ajuste manual de stock disponible por ubicación en Admin | INV | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-INV-02 | Validación de límite superior e inferior en cantidad de stock (BVA) | INV | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-INV-03 | Bloqueo o rechazo de compra en Storefront cuando stock es cero | INV | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-INV-04 | Consulta de niveles de inventario mediante `/admin/inventory-items` | INV | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-INV-05 | Bloqueo visual en Storefront UI para variantes con stock cero (BVA) | INV | [x] Alta [ ] Media | [ ] No ej. [x] Pasó | DEF-005 (#50) |
 | CP-PRM-01 | Creación manual de promoción porcentual en Admin | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
-| CP-PRM-02 | Activación y desactivación de código de descuento en Admin | PRM | [ ] Alta [ ] Media | [ ] No ej. [x] Pasó | N/A |
+| CP-PRM-02 | Activación y desactivación de código de descuento en Admin | PRM | [ ] Alta [ ] Media [x] Baja | [ ] No ej. [x] Pasó | N/A |
 | CP-PRM-03 | Aplicación de código promocional válido en carrito de Storefront | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 | CP-PRM-04 | Rechazo de código promocional inexistente o expirado en Storefront | PRM | [ ] Alta [x] Media | [ ] No ej. [x] Pasó | N/A |
 
@@ -330,13 +337,13 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Entregable | Descripción | Fase | Responsable | Fecha estimada |
 | --- | --- | --- | --- | --- |
-| **Plan de Pruebas** | Documento que describe el alcance, estrategia, recursos y cronograma de las pruebas. | Planificación | QA Lead | 18/11/2026 |
-| **Casos de Prueba** | Conjunto de 45 casos diseñados (18 manuales y 27 automatizados) para verificar los requisitos. | Diseño | QA Analyst | 18/11/2026 |
-| **Matriz de Trazabilidad de Requisitos** | Documento que vincula cada historia de usuario con sus casos de prueba e issues en GitHub. | Diseño | QA Lead | 18/11/2026 |
-| **Informes de Errores** | Registro detallado en GitHub Issues y espejo Markdown de todos los defectos encontrados. | Ejecución | QA Analyst | Continuo |
-| **Estrategia de Pruebas** | Documento que describe el enfoque general, tipos y técnicas de prueba aplicadas al proyecto. | Planificación | QA Lead | 18/11/2026 |
-| **Métricas de Pruebas** | Informe con los indicadores clave del proceso de pruebas y dashboard visual en GitHub Pages. | Cierre | QA Lead | 19/11/2026 |
-| **Aprobación del Cliente** | Documento formal que certifica que el cliente o usuario final acepta los resultados UAT. | Cierre | PO / Cliente | 19/11/2026 |
+| **Plan de Pruebas** | Documento que describe el alcance, estrategia, recursos y cronograma de las pruebas. | Planificación | Juanes Zapata (QA Lead) | 18/11/2026 |
+| **Casos de Prueba** | Conjunto de 51 casos diseñados (18 manuales y 33 automatizados / 34 pruebas Playwright) en libro Excel y matriz. | Diseño | César Julio (QA Analyst) | 23/11/2026 |
+| **Matriz de Trazabilidad de Requisitos** | Documento que vincula cada historia de usuario con sus casos de prueba, libro Excel, evidencias y defectos `DEF-*`. | Diseño | Juanes Zapata / César Julio | 23/11/2026 |
+| **Informes de Errores** | Registro detallado en GitHub Issues (`#46`–`#50`) y espejo Markdown (`defectos/registro-defectos.md`) de los defectos `DEF-001` a `DEF-005`. | Ejecución | Julián Cardona (QA Automatizador) | 23/11/2026 |
+| **Estrategia de Pruebas** | Documento que describe el enfoque general, tipos y técnicas de prueba aplicadas al proyecto. | Planificación | Juanes Zapata (QA Lead) | 18/11/2026 |
+| **Métricas de Pruebas** | Informe con los indicadores clave del proceso de pruebas y dashboard visual en GitHub Pages. | Cierre | Juanes Zapata (QA Lead) | 23/11/2026 |
+| **Aprobación del Cliente** | Documento formal que certifica que el cliente o usuario final acepta los resultados UAT. | Cierre | PO / Docente Evaluadora | 23/11/2026 |
 
 ---
 
@@ -350,10 +357,9 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Nombre | Rol | Responsabilidades | Dedicación |
 | --- | --- | --- | --- |
-| Subagente `SA-01` / `SA-03` | QA Automatizador / DevOps | Configuración de entorno, etiquetas y sincronización de GitHub Issues | 100 % |
-| Subagente `SA-02` | QA Analyst / Documentación | Redacción del Plan de Pruebas, fichas manuales y matriz de trazabilidad | 100 % |
-| Subagentes `SA-04` / `SA-05` | QA Analyst / QA Automatizador | Implementación y ejecución en Storefront (`:8000`) y Admin (`:9000/app`) | 100 % |
-| Subagentes `SA-06` / `SA-07` / `SA-08` | QA Lead / Auditor | Gestión de defectos, cálculo de métricas, dashboard, APA 7.ª y auditoría | 100 % |
+| Juanes Zapata | QA Lead / Líder de Pruebas | Planificación, matriz RACI, cálculo de métricas, dashboard visual y auditoría de cierre | 100 % |
+| César Julio | QA Analyst / Analista de Pruebas | Diseño de casos manuales y Excel, ejecución funcional en Storefront (`:8000`), evidencias y documentación APA 7.ª | 100 % |
+| Julián Cardona | QA Automatizador & Gestión de Defectos | Automatización en Playwright + TypeScript, ejecución en Admin (`:9000/app`) y Storefront, reporte y seguimiento de defectos `DEF-*` en GitHub Issues | 100 % |
 
 ### 10.2 Herramientas
 
@@ -363,8 +369,9 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Categoría | Herramienta | Propósito |
 | --- | --- | --- |
-| **Gestión de pruebas** | GitHub Issues + Plantillas YAML + GitHub CLI (`gh`) | Registro, etiquetado y seguimiento automatizado de 45 casos (`CP-*`) y defectos (`DEF-*`) |
-| **Automatización** | Playwright (`1.65.1`) + Chromium + TypeScript (`5.7.3`) + `tsx` | Ejecución automática de 27 pruebas E2E e integración HTTP y scripts de sincronización |
+| **Gestión de casos y trazabilidad** | Plantilla Excel oficial (`.xlsx`, 2 hojas) + `matriz-casos.md` + `matriz-trazabilidad.md` | Documentación paso a paso de los 51 casos (Hoja 1) y ejecución/regresión de defectos (Hoja 2) |
+| **Gestión de defectos** | GitHub Issues + Plantilla YAML (`reporte-defecto.yml` de 17 campos) + GitHub CLI (`gh`) | Registro, etiquetado y seguimiento exclusivo de defectos (`DEF-001` a `DEF-005`) |
+| **Automatización** | Playwright (`1.65.1`) + Chromium + TypeScript (`5.7.3`) + `tsx` | Ejecución automática de 33 especificaciones E2E (34 pruebas Playwright) e integración HTTP |
 | **Sistema Bajo Prueba y BD** | Medusa v2 (Turborepo, Next.js) + PostgreSQL `17.12` + Node.js `v24.15.0` | Ejecución local de Storefront (`:8000`), Admin (`:9000/app`) y persistencia relacional |
 | **Infraestructura Local** | WSL 2 + Docker Desktop (`4.99.0` / Docker `29.9.3`) | Soporte de entorno local y contenedores en Windows |
 | **Rendimiento** | No aplica (fuera de alcance) | N/A |
@@ -393,15 +400,15 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Actividad | Fecha Inicio | Fecha Fin | Responsable | Estado |
 | --- | --- | --- | --- | --- |
-| Planificación y diseño de casos | 18/11/2026 | 18/11/2026 | `SA-02` (QA Analyst) | [x] Completado |
-| Preparación del ambiente | 18/11/2026 | 19/11/2026 | `SA-01` (QA Automatizador) | [x] Completado |
-| Ejecución de pruebas funcionales | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado |
-| Ejecución de pruebas de integración | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado |
-| Pruebas de rendimiento y seguridad | 19/11/2026 | 19/11/2026 | `SA-04` / `SA-05` | [x] Completado (Seguridad básica; rendimiento fuera de alcance) |
-| Pruebas de aceptación (UAT) | 19/11/2026 | 19/11/2026 | PO / Cliente | [x] Completado |
-| Corrección de defectos | 19/11/2026 | 19/11/2026 | Dev / `SA-06` | [x] Completado (0 defectos reportados) |
-| Regresión post-corrección | 19/11/2026 | 19/11/2026 | `SA-06` | [x] Completado (Suite completa 28/28 aprobada) |
-| Cierre y entrega del informe | 19/11/2026 | 19/11/2026 | `SA-07` / `SA-08` | [x] Completado |
+| Planificación y diseño de casos | 18/11/2026 | 19/11/2026 | Juanes Zapata / César Julio | [x] Completado |
+| Preparación del ambiente | 18/11/2026 | 19/11/2026 | Julián Cardona | [x] Completado |
+| Ejecución de pruebas funcionales | 19/11/2026 | 23/11/2026 | César Julio / Julián Cardona | [x] Completado |
+| Ejecución de pruebas de integración | 19/11/2026 | 23/11/2026 | Julián Cardona | [x] Completado |
+| Pruebas de rendimiento y seguridad | 19/11/2026 | 23/11/2026 | César Julio / Julián Cardona | [x] Completado (Seguridad básica y usabilidad móvil; rendimiento fuera de alcance) |
+| Pruebas de aceptación (UAT) | 19/11/2026 | 23/11/2026 | PO / Cliente | [x] Completado |
+| Corrección de defectos | 23/11/2026 | 23/11/2026 | Dev local / Julián Cardona | [x] Completado (5 defectos `DEF-001` a `DEF-005`: 3 reales + 2 inyección controlada, corregidos en local) |
+| Regresión post-corrección | 23/11/2026 | 23/11/2026 | Julián Cardona | [x] Completado (Suite completa 34/34 pruebas Playwright y 18/18 manuales aprobadas) |
+| Cierre y entrega del informe | 23/11/2026 | 23/11/2026 | Juanes Zapata / César Julio | [x] Completado |
 
 ---
 
@@ -414,7 +421,7 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | # | Riesgo | Probabilidad | Impacto | Plan de Mitigación |
 | --- | --- | --- | --- | --- |
 | 1 | Retrasos en la entrega del build por parte del equipo de desarrollo. | Media | Alto | Establecer fechas de entrega claras con margen de holgura. Escalar si hay retraso superior a 2 días. |
-| 2 | Ambiente de pruebas inestable o no disponible (`:8000` o `:9000/app` caídos). | Baja | Alto | Mantener guía de arranque local y verificación HTTP previa al inicio de la Oleada 3. |
+| 2 | Ambiente de pruebas inestable o no disponible (`:8000` o `:9000/app` caídos). | Baja | Alto | Mantener guía de arranque local y verificación HTTP previa al inicio de la fase de ejecución de pruebas. |
 | 3 | Cambios de requisitos durante la ejecución de pruebas. | Alta | Medio | Control de cambios formal. Reevaluar los casos afectados antes de continuar la ejecución. |
 | 4 | Falta de datos de prueba suficientes (productos, clientes o regiones). | Media | Medio | Preparar conjunto de datos de prueba con anticipación y crear entidades aisladas mediante Admin API/UI. |
 | 5 | Colisión de estado entre ejecuciones paralelas en Storefront y Admin. | Media | Medio | Garantizar aislamiento de datos por superficie y ejecución secuencial en los flujos compartidos. |
@@ -431,7 +438,7 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 | --- | --- | --- | --- |
 | **Tasa de ejecución de casos** | `(Casos ejecutados / Total casos) x 100` | >= 95 % | 100 % |
 | **Tasa de casos aprobados** | `(Casos que pasan / Casos ejecutados) x 100` | >= 90 % | 100 % |
-| **Densidad de defectos** | `Defectos encontrados / Casos ejecutados` | < 0.1 | 0.00 |
+| **Densidad de defectos** | `Defectos encontrados / Casos ejecutados` | < 0.1 | 0.0980 |
 | **Defectos críticos abiertos** | `Conteo de defectos críticos sin resolver` | = 0 | 0 |
 | **Tasa de reapertura de defectos** | `(Defectos reabiertos / Defectos resueltos) x 100` | < 5 % | 0 % |
 | **Cobertura de requisitos** | `(Requisitos cubiertos / Total requisitos) x 100` | 100 % | 100 % |
@@ -443,9 +450,9 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 ### 13.1 Entregables del Plan de Pruebas
 
 - Plan de pruebas (este documento).
-- Casos de prueba documentados (45 casos: 18 manuales y 27 automatizados).
+- Casos de prueba documentados (51 casos: 18 manuales y 33 automatizados / 34 pruebas Playwright, en libro Excel y matriz).
 - Informe de ejecución de pruebas.
-- Registro de defectos (sincronizado con GitHub Issues).
+- Registro de defectos (`DEF-001` a `DEF-005` en GitHub Issues y `defectos/registro-defectos.md`).
 - Informe final de calidad (con análisis APA 7.ª edición y dashboard visual).
 
 ### 13.2 Aprobaciones
@@ -456,9 +463,10 @@ Los criterios de suspensión definen las condiciones bajo las cuales se detiene 
 
 | Nombre | Rol | Firma | Fecha |
 | --- | --- | --- | --- |
-| JuanZ14-Dev | QA Lead | Aprobado digitalmente (Repositorio QA) | 19/11/2026 |
-| Docente Evaluadora | PM / Docente | Revisión en sustentación académica | 19/11/2026 |
-| Auditor de Calidad (`SA-08`) | Cliente / PO | Acta de Auditoría (`docs/acta-auditoria-calidad.md`) | 19/11/2026 |
+| Juanes Zapata | QA Lead / Auditoría de Cierre | Aprobado digitalmente (Repositorio QA) | 23/11/2026 |
+| César Julio | QA Analyst | Aprobado digitalmente (Casos y APA 7.ª) | 23/11/2026 |
+| Julián Cardona | QA Automatizador & Gestión de Defectos | Aprobado digitalmente (Playwright y Defectos) | 23/11/2026 |
+| Docente Evaluadora | PM / Docente | Revisión en sustentación académica | 23/11/2026 |
 
 ---
 

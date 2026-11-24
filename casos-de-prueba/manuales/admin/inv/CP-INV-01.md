@@ -14,7 +14,7 @@
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [x] BVA [ ] Tabla de decisión [ ] Otro` |
-| **Responsable** | `SA-05 (QA Analyst)` |
+| **Responsable** | `Julián Cardona (QA — Ejecución Admin)` |
 | **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
 | **Observaciones** | Evidencia en `docs/evidencias/admin/CP-INV-01-stock-50.png`. |

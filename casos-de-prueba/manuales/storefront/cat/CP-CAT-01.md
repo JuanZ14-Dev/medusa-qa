@@ -14,7 +14,7 @@
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [ ] Tabla de decisión [x] Otro` |
-| **Responsable** | `SA-04 (QA Analyst)` |
+| **Responsable** | `César Julio (QA Analyst)` |
 | **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
 | **Observaciones** | Evidencia capturada en `docs/evidencias/storefront/CP-CAT-01.png`. |

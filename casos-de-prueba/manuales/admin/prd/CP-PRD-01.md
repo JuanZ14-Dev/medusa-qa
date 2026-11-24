@@ -14,7 +14,7 @@
 | **Prioridad** | `[x] Alta [ ] Media [ ] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[x] EP [ ] BVA [ ] Tabla de decisión [ ] Otro` |
-| **Responsable** | `SA-05 (QA Analyst)` |
+| **Responsable** | `Julián Cardona (QA — Ejecución Admin)` |
 | **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
 | **Observaciones** | Evidencias en `docs/evidencias/admin/CP-PRD-01-form-variantes.png` y `docs/evidencias/admin/CP-PRD-01-producto-creado.png`. |

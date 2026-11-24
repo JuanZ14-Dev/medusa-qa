@@ -5,21 +5,47 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-interface IssueMapEntry {
+interface MatrizCase {
   id: string
-  issueNumber: number
-  url: string
+  module: string
   surface: string
   mode: string
-  module: string
   priority: string
   file: string
 }
 
 const REPO = process.env.GITHUB_REPOSITORY || "JuanZ14-Dev/medusa-qa"
-const MAP_PATH = path.resolve("casos-de-prueba/github-issues-map.json")
+const MATRIZ_PATH = path.resolve("casos-de-prueba/matriz-casos.md")
 const RESULTS_PATH = path.resolve("reports/results.json")
 const OUT_PATH = path.resolve("docs/assets/data/metrics.json")
+
+function parseMatriz(): MatrizCase[] {
+  const raw = fs.readFileSync(MATRIZ_PATH, "utf8")
+  const cases: MatrizCase[] = []
+
+  for (const line of raw.split(/\r?\n/)) {
+    if (!line.startsWith("| CP-")) continue
+    const cols = line
+      .split("|")
+      .slice(1, -1)
+      .map((c) => c.trim().replace(/^`|`$/g, ""))
+    if (cols.length < 10) continue
+
+    cases.push({
+      id: cols[0],
+      module: cols[2],
+      surface: cols[3],
+      mode: cols[4],
+      priority: cols[5],
+      file: cols[9],
+    })
+  }
+
+  if (cases.length === 0) {
+    throw new Error(`No se encontraron casos de prueba en ${MATRIZ_PATH}`)
+  }
+  return cases
+}
 
 function collectAutomatedStatuses(): Map<string, "passed" | "failed"> {
   const statusMap = new Map<string, "passed" | "failed">()
@@ -96,7 +122,7 @@ function getDefectCounts() {
 }
 
 function main(): void {
-  const issueMap: IssueMapEntry[] = JSON.parse(fs.readFileSync(MAP_PATH, "utf8"))
+  const cases = parseMatriz()
   const autoMap = collectAutomatedStatuses()
   const defects = getDefectCounts()
 
@@ -116,7 +142,7 @@ function main(): void {
     Automatizado: { total: 0, passed: 0, failed: 0 },
   }
 
-  for (const entry of issueMap) {
+  for (const entry of cases) {
     const status =
       entry.mode === "Manual"
         ? getManualStatus(entry.file)
@@ -135,16 +161,22 @@ function main(): void {
     if (status === "passed") byModule[entry.module].passed += 1
     if (status === "failed") byModule[entry.module].failed += 1
 
+    if (!bySurface[entry.surface]) {
+      bySurface[entry.surface] = { total: 0, passed: 0, failed: 0 }
+    }
     bySurface[entry.surface].total += 1
     if (status === "passed") bySurface[entry.surface].passed += 1
     if (status === "failed") bySurface[entry.surface].failed += 1
 
+    if (!byMode[entry.mode]) {
+      byMode[entry.mode] = { total: 0, passed: 0, failed: 0 }
+    }
     byMode[entry.mode].total += 1
     if (status === "passed") byMode[entry.mode].passed += 1
     if (status === "failed") byMode[entry.mode].failed += 1
   }
 
-  const totalCases = issueMap.length
+  const totalCases = cases.length
   const executionRate = Number(((executed / totalCases) * 100).toFixed(2))
   const passRate = executed > 0 ? Number(((passed / executed) * 100).toFixed(2)) : 0
   const defectDensity = executed > 0 ? Number((defects.total / executed).toFixed(4)) : 0
@@ -188,7 +220,7 @@ function main(): void {
         name: "Densidad de defectos",
         formula: "Defectos encontrados / Casos ejecutados",
         target: "< 0.1",
-        actual: `${defectDensity}`,
+        actual: defectDensity.toFixed(4),
         numericValue: defectDensity,
         met: defectDensity < 0.1,
       },

@@ -14,7 +14,7 @@
 | **Prioridad** | `[ ] Alta [ ] Media [x] Baja` |
 | **Tipo de prueba** | `[x] Funcional [ ] Regresión [ ] Integración [ ] Otro` |
 | **Técnica aplicada** | `[ ] EP [ ] BVA [x] Tabla de decisión [ ] Otro` |
-| **Responsable** | `SA-05 (QA Analyst)` |
+| **Responsable** | `Julián Cardona (QA — Ejecución Admin)` |
 | **Fecha de ejecución** | `19/11/2026` |
 | **Defectos asociados** | `N/A` |
 | **Observaciones** | Evidencias en `docs/evidencias/admin/CP-PRM-02-inactiva.png` y `docs/evidencias/admin/CP-PRM-02-promocion-estados.png`. |

@@ -9,8 +9,6 @@
     "test:admin": "playwright test --project=admin",
     "typecheck": "tsc --noEmit",
     "gh:labels": "npx tsx scripts/setup-github-labels.ts",
-    "gh:sync-cases": "npx tsx scripts/sync-test-cases-to-gh.ts",
-    "gh:sync-results": "npx tsx scripts/sync-results-to-gh.ts",
     "metrics:generate": "npx tsx scripts/generate-metrics.ts",
     "docs:validate": "npx tsx scripts/validate-apa7.ts"
   },

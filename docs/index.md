@@ -5,7 +5,7 @@ title: Proyecto QA Medusa
 
 # Aseguramiento de Calidad (QA) — Sistema de Comercio Electrónico Medusa
 
-Bienvenido al portal documental del proyecto de Aseguramiento de Calidad (QA) aplicado sobre la plataforma **Medusa** (`http://localhost:8000` Storefront y `http://localhost:9000/app` Admin), gestionado íntegramente mediante GitHub Issues, Playwright + TypeScript y GitHub Pages bajo normas APA 7.ª edición.
+Bienvenido al portal documental del proyecto de Aseguramiento de Calidad (QA) aplicado sobre la plataforma **Medusa** (`http://localhost:8000` Storefront y `http://localhost:9000/app` Admin), con trazabilidad de casos en libro Excel oficial y gestión exclusiva de defectos (`DEF-*`) en GitHub Issues, automatización en Playwright + TypeScript y publicación en GitHub Pages bajo normas APA 7.ª edición.
 
 ## Navegación de Entregables
 
@@ -23,6 +23,6 @@ Bienvenido al portal documental del proyecto de Aseguramiento de Calidad (QA) ap
 | Dimensión | Cantidad | Superficie | Estado |
 | --- | :---: | --- | --- |
 | Casos manuales ejecutados | 18 | Storefront (9) y Admin (9) | 100 % aprobados |
-| Casos automatizados Playwright | 27 | Storefront (13) y Admin (14) | 100 % aprobados |
-| GitHub Issues sincronizados (`CP-*`) | 45 | Repositorio `JuanZ14-Dev/medusa-qa` | Actualizados |
-| Defectos reportados (`DEF-*`) | 0 | Storefront y Admin | Cero críticos abiertos |
+| Casos automatizados Playwright | 33 (34 pruebas) | Storefront (19) y Admin (14) | 100 % aprobados |
+| Total de casos de prueba trazados | 51 | Libro Excel (`.xlsx`) y Matriz de Trazabilidad | 100 % ejecutados |
+| Defectos reportados en GitHub Issues (`DEF-*`) | 5 (`#46`–`#50`) | Storefront (3 reales, 2 inyección controlada) | 5 cerrados por regresión (0 críticos abiertos) |

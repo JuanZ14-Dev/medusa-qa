@@ -5,14 +5,20 @@ Repositorio oficial de planificación, diseño, automatización, trazabilidad y 
 - **Sitio público (GitHub Pages):** https://juanz14-dev.github.io/medusa-qa/
 - **Dashboard visual de métricas:** https://juanz14-dev.github.io/medusa-qa/dashboard.html
 
+## Equipo QA
+
+- **Juanes Zapata** — QA Lead / Líder de Pruebas (Planificación, RACI, Métricas, Dashboard y Auditoría de Cierre).
+- **César Julio** — QA Analyst / Analista de Pruebas (Diseño de casos manuales, ejecución funcional Storefront `:8000`, evidencias y documentación APA 7.ª).
+- **Julián Cardona** — QA Automatizador & Gestión de Defectos (Playwright + TypeScript, ejecución en Admin `:9000/app` y Storefront, reporte y seguimiento de defectos `DEF-*` en GitHub Issues).
+
 ## Estructura del Proyecto
 
 - `docs/`: Plan de Pruebas (estructura fiel a `plan_pruebas (1).pdf`), Informe Final de Calidad bajo normas APA 7.ª edición, Matriz de Trazabilidad, Referencias APA 7.ª, Acta de Auditoría y Dashboard visual para GitHub Pages.
-- `casos-de-prueba/`: Matriz consolidada de 45 casos de prueba (18 manuales y 27 automatizados), fichas individuales de 16 campos y mapeo hacia GitHub Issues (`github-issues-map.json`).
-- `tests/`: Suite automatizada en Playwright + TypeScript organizada con Page Object Model (`pages/`, `fixtures/`, `helpers/`, `storefront/`, `admin/`).
-- `defectos/`: Plantilla de reporte de defecto de 17 campos y registro sincronizado con GitHub Issues.
-- `scripts/`: Utilidades CLI para sincronización con GitHub Issues, cálculo de métricas y validación de formato APA 7.ª edición.
-- `.github/`: Etiquetas normalizadas, plantillas de GitHub Issues (casos de prueba y defectos) y flujos de CI/Pages.
+- `casos-de-prueba/`: Libro Excel oficial (`casos-de-prueba-medusa.xlsx`, Hoja 1 de 51 casos paso a paso y Hoja 2 de ejecución y regresión de defectos), matriz consolidada de 51 casos de prueba (18 manuales y 33 automatizados) y fichas individuales de 16 campos en `manuales/`.
+- `tests/`: Suite automatizada en Playwright + TypeScript organizada con Page Object Model (`pages/`, `fixtures/`, `helpers/`, `storefront/`, `admin/`), con 33 archivos `.spec.ts` (34 pruebas totales).
+- `defectos/`: Plantilla oficial de reporte de defecto de 17 campos y registro sincronizado con GitHub Issues (`DEF-001` a `DEF-005`).
+- `scripts/`: Utilidades CLI para cálculo de métricas (`generate-metrics.ts`), sincronización de etiquetas de defectos (`setup-github-labels.ts`) y validación de formato APA 7.ª edición (`validate-apa7.ts`).
+- `.github/`: Etiquetas normalizadas, plantilla oficial de reporte de defectos (`reporte-defecto.yml` de 17 campos) en GitHub Issues y flujos de CI/Pages.
 
 ## Guía Rápida de Reproducción (Para Nuevos Integrantes)
 
@@ -20,7 +26,7 @@ Repositorio oficial de planificación, diseño, automatización, trazabilidad y 
 
 - **Node.js** `>= 22`
 - **PostgreSQL 17** activo en el puerto `5432`
-- **Git** y **GitHub CLI (`gh`)** autenticado (`gh auth login`), únicamente si se van a ejecutar scripts `gh:*`
+- **Git** y **GitHub CLI (`gh`)** autenticado (`gh auth login`), únicamente si se van a ejecutar scripts `gh:*` o `metrics:generate`
 
 ### 2. Preparar el Sistema Bajo Prueba (Medusa)
 
@@ -62,13 +68,11 @@ npm run test:storefront
 npm run test:admin
 ```
 
-### 4. Sincronización con GitHub Issues y Métricas (Opcional)
+### 4. Gestión de Defectos en GitHub Issues y Generación de Métricas (Opcional)
 
-> **Advertencia:** Si realizas pruebas en solitario y no deseas modificar los 45 issues oficiales del repositorio principal, crea un **Fork** en GitHub y cambia `GITHUB_REPOSITORY=<tu-usuario>/medusa-qa` en tu `.env` antes de ejecutar comandos `gh:*`.
+> **Nota:** GitHub Issues está dedicado única y exclusivamente al reporte y seguimiento de defectos (`DEF-*`) mediante `.github/ISSUE_TEMPLATE/reporte-defecto.yml`. Si realizas pruebas en solitario y no deseas alterar el repositorio principal, crea un **Fork** en GitHub y ajusta `GITHUB_REPOSITORY=<tu-usuario>/medusa-qa` en tu `.env`.
 
 ```bash
 npm run gh:labels
-npm run gh:sync-cases
-npm run gh:sync-results
 npm run metrics:generate
 ```

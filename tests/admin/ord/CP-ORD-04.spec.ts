@@ -93,7 +93,7 @@ test.describe("CP-ORD-04: Filtrado y búsqueda de órdenes por estado en Admin",
     }
 
     const pendingRes = await request.get(
-      `${QA_ENV.backendUrl}/admin/orders?status[]=pending`,
+      `${QA_ENV.backendUrl}/admin/orders?status[]=pending&limit=100&order=-created_at`,
       { headers: adminHeaders(token) }
     )
     expect(pendingRes.status()).toBe(200)

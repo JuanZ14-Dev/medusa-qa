@@ -1,5 +1,4 @@
 [
-  { "name": "type:test-case", "color": "0052CC", "description": "Caso de prueba del plan de QA (CP-*)" },
   { "name": "type:defect", "color": "D73A4A", "description": "Defecto encontrado durante la ejecución (DEF-*)" },
   { "name": "surface:storefront", "color": "0E8A16", "description": "Superficie Storefront (http://localhost:8000)" },
   { "name": "surface:admin", "color": "5319E7", "description": "Superficie Admin (http://localhost:9000/app)" },
@@ -9,6 +8,7 @@
   { "name": "status:passed", "color": "2EA44F", "description": "Estado: Pasó" },
   { "name": "status:failed", "color": "B60205", "description": "Estado: Falló" },
   { "name": "status:blocked", "color": "D93F0B", "description": "Estado: Bloqueado" },
+  { "name": "status:reopened", "color": "FBCA04", "description": "Defecto reabierto tras verificación" },
   { "name": "priority:alta", "color": "E11D48", "description": "Prioridad Alta" },
   { "name": "priority:media", "color": "F59E0B", "description": "Prioridad Media" },
   { "name": "priority:baja", "color": "6B7280", "description": "Prioridad Baja" },
