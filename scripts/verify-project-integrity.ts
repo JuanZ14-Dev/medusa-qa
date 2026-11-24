@@ -50,11 +50,11 @@ const REQUIRED_MANUAL_FIELDS = [
 
 const FORBIDDEN_R1_PATTERN = new RegExp(
   [
-    "sub" + "agente",
-    "(?<![Uu]ser[-_])(?<![Uu]ser)" + "agen" + "te",
+    "sub" + "ag" + "ente",
+    "(?<![Uu]ser[-_])(?<![Uu]ser)" + "ag" + "ente",
     "SA-" + "\\d+",
     "Ole" + "ada",
-    "multi-?" + "agen" + "te",
+    "multi-?" + "ag" + "ente",
   ].join("|"),
   "i"
 )
@@ -273,7 +273,8 @@ async function main(): Promise<void> {
   if (errors.length > 0) {
     console.error("\nErrores de integridad detectados:")
     for (const err of errors) console.error(` - ${err}`)
-    process.exit(1)
+    process.exitCode = 1
+    return
   }
 
   console.log("\nResultado: INTEGRIDAD DEL PROYECTO VERIFICADA (0 errores).")
