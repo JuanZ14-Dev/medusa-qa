@@ -33,7 +33,7 @@ Este documento privado organiza la exposición oral y demostración en vivo ante
 
 ### Punto 2: Plan de pruebas (Min 4:00 – 8:30)
 
-- **Qué mostrar en pantalla:** `https://juanz14-dev.github.io/medusa-qa/plan-de-pruebas.html` (y comparativa rápida con `plan_pruebas (1).pdf`).
+- **Qué mostrar en pantalla:** `https://juanz14-dev.github.io/medusa-qa/Plan_de_Pruebas_Medusa_QA.pdf` (documento PDF oficial diligenciado de 15 páginas) y `https://juanz14-dev.github.io/medusa-qa/plan-de-pruebas.html`.
 - **Qué decir (guion sugerido):**
   > "Para gobernar todo el proceso seguimos exactamente la estructura de las **14 secciones** del formato oficial `plan_pruebas (1).pdf`, redactado bajo normas **APA 7.ª edición** con tablas numeradas, estilo objetivo y referencias formales."
   >
@@ -90,10 +90,11 @@ Este documento privado organiza la exposición oral y demostración en vivo ante
 ### Punto 5: Métricas de prueba presentadas en dashboard (Min 17:30 – 21:00)
 
 - **Qué mostrar en pantalla:**
-  1. **Dashboard Visual en GitHub Pages:** `https://juanz14-dev.github.io/medusa-qa/dashboard.html`.
-  2. Archivo `docs/assets/data/metrics.json` y brevemente `scripts/generate-metrics.ts`.
+  1. **Dashboard Interactivo en Excel:** Hoja `Dashboard` de `casos-de-prueba/casos-de-prueba-medusa.xlsx` (4 tarjetas KPI por fórmula, 4 gráficos en cuadrícula 2x2 y 4 segmentadores interactivos conectados a las Tablas Dinámicas de `Datos_QA`).
+  2. **Dashboard Visual en GitHub Pages:** `https://juanz14-dev.github.io/medusa-qa/dashboard.html`.
+  3. Archivo `docs/assets/data/metrics.json` y brevemente `scripts/generate-metrics.ts`.
 - **Qué decir (guion sugerido):**
-  > "Gracias Julián. Para evitar métricas manuales propensas a error, el script `generate-metrics.ts` lee directamente la matriz de 51 casos, el reporte JSON real de Playwright (`34/34`), las 18 actas manuales y la consulta en vivo a GitHub Issues (`gh issue list --label type:defect`), generando `metrics.json` para nuestro **Dashboard Visual en GitHub Pages**."
+  > "Gracias Julián. Para evitar métricas manuales propensas a error, implementamos dos vistas sincronizadas de dashboard: primero, directamente dentro del libro Excel oficial en la hoja **Dashboard**, alimentada por Tablas Dinámicas sobre `Datos_QA` con 4 tarjetas KPI (`51` casos, `100 %` aprobados, `5` defectos `DEF-*` y `0,098` densidad), 4 gráficos en cuadrícula 2x2 y 4 segmentadores interactivos por superficie, prioridad, origen de hallazgo y responsable; y segundo, el script `generate-metrics.ts` que lee la matriz de 51 casos, el reporte JSON real de Playwright (`34/34`), las 18 actas manuales y la consulta en vivo a GitHub Issues, generando `metrics.json` para nuestro **Dashboard Visual en GitHub Pages**."
   >
   > "En pantalla vemos las tarjetas KPI con las **6 métricas exactas** del Plan de Pruebas, las gráficas interactivas en Chart.js por módulo funcional y por superficie (**28 casos en Storefront** y **23 en Admin**), además del diagrama Mermaid con las fases estándar del ciclo QA y las responsabilidades del equipo."
   >
@@ -110,7 +111,7 @@ Este documento privado organiza la exposición oral y demostración en vivo ante
   >
   > "También mantenemos transparencia sobre el alcance y riesgos residuales: las pruebas de carga superior a 500 usuarios concurrentes y las pasarelas bancarias productivas quedaron fuera de alcance, por lo que recomendamos pruebas de rendimiento con k6 antes de pasar a producción."
   >
-  > "Finalmente, ejecutamos nuestra auditoría interna de cierre (`acta-auditoria-calidad.md`) verificando el libro Excel de 51 casos, 27 capturas reales en `docs/evidencias/` (Storefront, Admin y defectos), los 5 issues cerrados (`#46`–`#50`) y `npm run docs:validate` con 0 errores en los 8 documentos APA 7.ª edición, emitiendo dictamen **APROBADO**. Quedamos atentos a sus preguntas, profesora."
+  > "Finalmente, ejecutamos nuestra auditoría interna de cierre (`acta-auditoria-calidad.md`) verificando el libro Excel de 51 casos con su hoja `Dashboard`, 27 capturas reales en `docs/evidencias/` (Storefront, Admin y defectos), los 5 issues cerrados (`#46`–`#50`) y `npm run docs:validate` con 0 errores en los 10 documentos APA 7.ª edición, emitiendo dictamen **APROBADO**. Quedamos atentos a sus preguntas, profesora."
 
 ---
 
